@@ -1,0 +1,80 @@
+@import "../../_globalColor";
+
+.discipline-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 2.5rem auto 1rem;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.discipline-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 26px;
+  border: 1px solid rgba(15, 47, 56, 0.12);
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.28s ease, border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.discipline-card:hover {
+  transform: translateY(-6px);
+  border-color: $accentWarmOnLight;
+  box-shadow: 0 14px 30px -18px rgba(15, 47, 56, 0.45);
+}
+
+.discipline-title {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: $accentWarmOnLight;
+}
+
+.discipline-desc {
+  margin: 0 0 20px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+.discipline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.discipline-skill {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  /* on-light variants - raw #40c6cf is only 2.06:1 on white */
+  border: 1px solid rgba(14, 124, 134, 0.35);
+  color: $accentCoolOnLight;
+}
+
+/* Light theme fallback, in case the site is switched back to it. */
+.discipline-card:not(.discipline-card-dark) {
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.discipline-card:not(.discipline-card-dark) .discipline-desc {
+  color: $cardSubtitle;
+}
+
+@media (max-width: 768px) {
+  .discipline-cards {
+    gap: 16px;
+  }
+  .discipline-card {
+    padding: 22px 20px;
+  }
+}

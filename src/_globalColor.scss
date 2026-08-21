@@ -1,0 +1,117 @@
+/* ── Palette ────────────────────────────────────────────────
+   Warm  #f37633  orange   — primary accent, buttons
+   Cool  #40c6cf  cyan     — secondary accent, hover, bars
+   Both are LIGHT colours: they need dark text on top, never
+   white (white/orange = 2.8:1, white/cyan = 2.1:1 — both fail
+   WCAG AA). The -onLight variants below are darkened so they
+   stay legible as text on a white background.
+   ──────────────────────────────────────────────────────── */
+// Display typeface - used for the logotype and the big greeting headline.
+// Declared as @font-face in src/index.css.
+$displayFont: "TikaFont Adjusted", "Agustina Regular", cursive;
+
+$accentWarm: #f37633;
+$accentCool: #40c6cf;
+$accentWarmOnLight: #c2540f; // 4.60:1 on white
+$accentCoolOnLight: #0e7c86; // 4.95:1 on white
+$buttonTextColor: #111318;   // 6.70:1 on orange, 9.17:1 on cyan
+
+// Page backgrounds. Both are the cyan taken to the extremes of lightness
+// so the orange accent stays visible on them (it does NOT on raw #40c6cf).
+$lightBackgroundTint: #e4f4f7; // body text 16.9:1
+$darkPage: #14171c;            // neutral charcoal - no hue, so the orange and
+                               // cyan carry all the colour. orange 6.37:1,
+                               // cyan 8.72:1, white 17.96:1
+
+/* Change colors in this file to style to your needs on a global level. 
+Certain colors are used for different and multiply types of elements. 
+For greater control over colors visit each components .scss file. */
+
+// button colors
+$buttonColor: #f37633;
+$buttonHover: #40c6cf;
+$topButtonHover: #40c6cf;
+
+// Base text colours. The site is pinned to the dark theme, so these must be
+// LIGHT - several rules apply them with !important and have no .dark-mode
+// counterpart, which made black text sit invisibly on the dark background.
+$titleColor: #0f2f38;
+$textColor: #1d444d;
+$subTitle: #4a6b73;
+$cardSubtitle: #41626a;
+$talkCardSubTitle: #7f8287;
+$blogCardTitleColor: #262626;
+
+// text color dark theme
+$textColorDark: #ffffff;
+
+// toggle switch colors
+$toggleCheck: #f37633;
+$toggleSwitchSliderBG: #ccc;
+
+// githubRepo specific colors
+$githubRepoCardLanguageColorBG: #0000ff;
+$githubRepoCardColor: rgb(88, 96, 105);
+$githubRepoCardRepoCardStatsColor: rgb(106, 115, 125);
+$githubRepoCardRepoNameColor: rgb(36, 41, 46);
+$githubProfileCardLocationTS: #ffebcd;
+$githubProfileCardBorder: #f37633;
+
+// light background colors
+$lightBackground1: #fff;
+$lightBackground2: rgb(255, 255, 255);
+$lightBackground3: #f3fbfc;
+$blogCardContainerColor: #586069;
+// dark background colors
+$darkBackground: $darkPage;
+
+// light theme box shadows
+$lightBoxShadowDark: rgba(0, 0, 0, 0.2);
+$lightBoxShadow: rgba(0, 0, 0, 0.1);
+$lightBoxShadowDarker: rgba(0, 0, 0, 0.3);
+
+// dark theme box shadows
+$darkBoxShadow: #d9dbdf;
+$darkBoxShadow2: #ffffff;
+
+// linear gradients
+$experienceCardBlurredDivLG: linear-gradient(
+  rgba(0, 0, 0, 0.4),
+  rgba(0, 0, 0, 0.2)
+);
+$experienceCardBannerLG: linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)
+);
+
+// borders
+$progressBarBackground: rgb(243, 239, 239);
+$lightBorder1: rgba(211, 211, 211, 0.397);
+$educationCardBorder: #40c6cf;
+
+// hovers
+$achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
+$blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
+$headerHoverBG: #f4f4f4;
+$contactDetailHoverTS: #b5b5b5;
+
+// misc backgrounds
+$progressBarSpanBG: #40c6cf;
+$iconBackground: #333;
+$appHeaderBG: $darkPage;
+
+// misc colors
+$skillsColor: #c2540f;
+$appLink: #0e7c86;
+
+// social media icons
+$faceBook: #3b5998;
+$linkedin: #0e76a8;
+$github: #333;
+$gitlab: #fca326;
+$google: #ea4335;
+$twitter: #1da1f2;
+$medium: #000;
+$stackoverflow: #f48024;
+$instagram: #c13584;
+$kaggle: #20beff;

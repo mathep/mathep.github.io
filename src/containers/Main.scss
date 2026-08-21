@@ -1,0 +1,15 @@
+@import "../_globalColor";
+
+// Light mode sets no class on the wrapper, so the light page colour has to
+// live on <body>. The dark wrapper needs min-height so the tint can't peek
+// out beneath it on short pages.
+body {
+  background-color: $lightBackgroundTint;
+}
+
+.dark-mode {
+  background-color: $darkBackground;
+  color: white;
+  min-height: 100vh;
+  transition: "0.1s";
+}

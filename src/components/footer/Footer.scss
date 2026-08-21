@@ -1,0 +1,22 @@
+@import "../../_globalColor";
+
+.footer-text {
+  text-align: center;
+  color: $subTitle !important;
+}
+
+.dark-mode {
+  color: $textColorDark !important;
+}
+
+.footer-div {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+/* Template credit sits quieter than the two lines above it. */
+.footer-credit {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-top: 0.35rem;
+}

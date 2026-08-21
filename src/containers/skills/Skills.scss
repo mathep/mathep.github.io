@@ -1,0 +1,103 @@
+@import "../../_globalColor";
+
+.skills-main-div {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills-text-div {
+  margin-left: 0;
+}
+
+.skills-main-div > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.skills-image-div > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skills-heading {
+  font-family: $displayFont;
+  font-size: 72px;
+  font-weight: 400;
+}
+.subTitle {
+  color: $subTitle;
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .skills-heading {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 36px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 19px;
+    line-height: normal;
+  }
+  .skills-main-div {
+    flex-direction: column;
+  }
+  .skills-text-div {
+    margin-left: 0px;
+    margin: 20px;
+  }
+  .skills-text {
+    font-size: 19px;
+  }
+  .skills-text-subtitle {
+    font-size: 19px;
+    text-align: center;
+  }
+  .skills-image-div {
+    /* display: none; */
+    order: 2;
+  }
+}
+
+/* Skill bullets - a small diamond marker instead of an emoji, with the text
+   block flexed so wrapped lines hang aligned under the first line. */
+.skills-list {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  max-width: 620px;
+  text-align: left;
+}
+
+.skills-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.skills-list-item::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  margin-top: 9px;
+  transform: rotate(45deg);
+  background-color: $accentWarmOnLight;
+}
+
+@media (max-width: 768px) {
+  .skills-list-item {
+    font-size: 19px;
+  }
+  .skills-list-item::before {
+    margin-top: 8px;
+  }
+}
