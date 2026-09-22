@@ -6,6 +6,7 @@ import {
   greeting,
   skillsSection,
   bigProjects,
+  robloxGames,
   contactInfo
 } from "../../portfolio";
 
@@ -22,6 +23,7 @@ function Header() {
   const links = [
     {label: skillsSection.title, href: "#skills", show: skillsSection.display},
     {label: bigProjects.title, href: "#projects", show: bigProjects.display},
+    {label: robloxGames.title, href: "#roblox", show: robloxGames.display},
     {label: contactInfo.title, href: "#contact", show: true}
   ].filter(link => link.show && link.label);
 
@@ -34,7 +36,11 @@ function Header() {
           <span className="grey-color">/&gt;</span>
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" htmlFor="menu-btn" style={{color: "white"}}>
+        <label
+          className="menu-icon"
+          htmlFor="menu-btn"
+          style={{color: "white"}}
+        >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>

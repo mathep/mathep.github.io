@@ -7,9 +7,8 @@ import emoji from "react-easy-emoji";
 const greeting = {
   username: "mathep",
   title: "Hi, I'm mathep",
-  subTitle: emoji(
-    "Gameplay programmer working in Luau, C# and GDScript. I build the systems games run on — combat, movement, persistence, netcode — and the tooling that makes them fast to iterate on. 🎮"
-  ),
+  subTitle:
+    "Gameplay programmer working in Luau, C# and GDScript. I write gameplay systems and the tools that go with them, mostly on Roblox.",
   resumeLink: "", // paste a public link to your resume PDF to show the button
   displayGreeting: true
 };
@@ -69,7 +68,8 @@ const disciplines = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "GAMEPLAY PROGRAMMER WHO CARES ABOUT HOW THINGS FEEL, NOT JUST WHETHER THEY RUN",
+  subTitle:
+    "GAMEPLAY PROGRAMMER WHO CARES ABOUT HOW THINGS FEEL, NOT JUST WHETHER THEY RUN",
   skills: [],
 
   /* Icons come from Iconify — browse names at https://icon-sets.iconify.design
@@ -130,9 +130,7 @@ const bigProjects = {
       projectName: "RoSpheal",
       projectDesc:
         "Fork of RoSeal with convenient features that I like, such as swipe-based unfriending and an outfit randomizer.",
-      footerLink: [
-        {name: "Source", url: "https://github.com/mathep/RoSpheal"}
-      ]
+      footerLink: [{name: "Source", url: "https://github.com/mathep/RoSpheal"}]
     },
     {
       projectName: "TCG-Cardle",
@@ -155,6 +153,48 @@ const bigProjects = {
   display: true
 };
 
+/* Roblox titles you've contributed to. Thumbnails are the games' own
+   16:9 store art, saved locally so they render without a network request.
+   "role" is optional - leave it empty and the line is skipped. Visit counts
+   are static text; update them whenever you refresh the images. */
+const robloxGames = {
+  title: "Roblox Games",
+  subtitle: "Live titles I've worked on",
+  games: [
+    {
+      image: require("./assets/images/mapleHospital.png"),
+      name: "Maple Hospital",
+      studio: "Marizma Games",
+      role: "",
+      description:
+        "Medical roleplay where players staff and visit a working hospital as doctors, nurses and patients. One of the most-played roleplay titles on Roblox.",
+      stat: "1.8B+ visits",
+      url: "https://www.roblox.com/games/8704997000/Maple-Hospital"
+    },
+    {
+      image: require("./assets/images/momoCity.png"),
+      name: "Momo City",
+      studio: "ももスタジオ",
+      role: "",
+      description:
+        "Pastel-styled social city in alpha - roleplay, mini-games and character customisation in a kawaii town shared with other players.",
+      stat: "1.6M+ visits",
+      url: "https://www.roblox.com/games/131856811555630/Momo-City"
+    },
+    {
+      image: require("./assets/images/objectsGlobal.png"),
+      name: "Objects Global - BFDI RP",
+      studio: "Fish Frontier",
+      role: "",
+      description:
+        "Object-show roleplay inspired by Battle for Dream Island. Play as object characters across a shared world with a large character roster.",
+      stat: "15M+ visits",
+      url: "https://www.roblox.com/games/5361481791/Objects-Global-BFDI-RP"
+    }
+  ],
+  display: true
+};
+
 const achievementSection = {
   title: emoji("Achievements 🏆"),
   subtitle: "Game jams, shipped titles, and things worth bragging about",
@@ -172,7 +212,12 @@ const blogSection = {
 
 const talkSection = {title: "Talks", subtitle: "", talks: [], display: false};
 
-const podcastSection = {title: "Podcast", subtitle: "", podcast: [], display: false};
+const podcastSection = {
+  title: "Podcast",
+  subtitle: "",
+  podcast: [],
+  display: false
+};
 
 const resumeSection = {
   title: "Resume",
@@ -204,6 +249,7 @@ export {
   workExperiences,
   openSource,
   bigProjects,
+  robloxGames,
   achievementSection,
   blogSection,
   talkSection,

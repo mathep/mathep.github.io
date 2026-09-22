@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
+import RobloxGames from "./robloxGames/RobloxGames";
 import Achievement from "./achievement/Achievement";
 import Blogs from "./blogs/Blogs";
 import Footer from "../components/footer/Footer";
@@ -35,6 +36,7 @@ const Main = () => {
         <WorkExperience />
         <Projects />
         <StartupProject />
+        <RobloxGames />
         <Achievement />
         <Blogs />
         <Talks />
